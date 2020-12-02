@@ -1,0 +1,10 @@
+{
+  "doctor_id": 2,
+  "service_id": 1,
+  "date": "2020-03-9",
+  "time_slot": "3",
+  "description": "ab",
+  "address": "",
+  "latitude": 12.00,
+  "longitude": 26.86
+}

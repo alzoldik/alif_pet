@@ -1,0 +1,9 @@
+{
+  "id": 1,
+  "created_at": "2020-03-09 17:17:30",
+  "updated_at": "2020-03-09 17:17:30",
+  "name": "Cardiology",
+  "name_ar": "القلب",
+  "sort_order": 1,
+  "is_activated": 1
+}

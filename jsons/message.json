@@ -1,0 +1,12 @@
+{
+  "id": 2,
+  "created_at": "2020-03-18 11:39:57",
+  "updated_at": "2020-03-18 11:39:57",
+  "user_id": 10,
+  "type": "text",
+  "message": "Wao",
+  "file": null,
+  "service_request_id": 2,
+  "read": 0,
+  "user": "$profile"
+}

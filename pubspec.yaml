@@ -1,0 +1,116 @@
+name: alif_pet
+description: A new Flutter project.
+
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  flutter_localizations:
+    sdk: flutter
+
+  flutter_cupertino_localizations: ^1.0.1
+  cupertino_icons: ^0.1.2
+  provider: ^4.0.0
+  shared_preferences: ^0.5.6+3
+  page_transition:
+  flutter_statusbarcolor:
+  pin_code_fields: ^2.3.0+3
+  flutter_rating_bar: ^3.0.1+1
+#  connectivity:
+  intl:
+  flutter_date_pickers: ^0.0.6
+  flutter_plugin_android_lifecycle: 1.0.3
+  image_picker: 0.6.2+3
+  dio:
+  path:
+  webview_flutter: ^0.3.20
+  simple_animations: ^1.1.3
+  flutter_rounded_date_picker: ^1.0.4
+  google_maps_flutter: ^0.5.24+1
+  geolocator: ^5.3.0
+  location: ^2.5.0
+  #  keyboard_visibility:
+  flutter_polyline_points: ^0.1.0
+  permission_handler: ^3.0.0
+  agora_rtc_engine: ^1.0.8
+  flutter_pusher_client:
+  laravel_echo:
+
+dev_dependencies:
+  flutter_launcher_icons: "^0.7.3"
+  flutter_test:
+    sdk: flutter
+  build_runner:
+  json_serializable:
+  flutter_google_places:
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path_android: "assets/ios.png"
+  image_path_ios: "assets/ios.png"
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/
+    - i18n/en.json
+    - i18n/ar.json
+
+  fonts:
+    - family: cairo_black
+      fonts:
+        - asset: assets/Fonts/Cairo-Black.ttf
+
+    - family: cairo_bold
+      fonts:
+        - asset: assets/Fonts/Cairo-Bold.ttf
+
+    - family: cairo_extraLight
+      fonts:
+        - asset: assets/Fonts/Cairo-ExtraLight.ttf
+
+    - family: cairo_light
+      fonts:
+        - asset: assets/Fonts/Cairo-Light.ttf
+
+    - family: cairo_regular
+      fonts:
+        - asset: assets/Fonts/Cairo-Regular.ttf
+
+    - family: cairo_semiBold
+      fonts:
+        - asset: assets/Fonts/Cairo-SemiBold.ttf
+
+    - family: ceraPro_black
+      fonts:
+        - asset: assets/Fonts/CeraPro-Black.ttf
+
+    - family: ceraPro_bold
+      fonts:
+        - asset: assets/Fonts/CeraPro-Bold.ttf
+
+    - family: ceraPro_light
+      fonts:
+        - asset: assets/Fonts/CeraPro-Light.ttf
+
+    - family: ceraPro_medium
+      fonts:
+        - asset: assets/Fonts/CeraPro-Medium.ttf
+
+    - family: ceraPro_regular
+      fonts:
+        - asset: assets/Fonts/CeraPro-Regular.ttf
+
+    - family: ceraPro_thin
+      fonts:
+        - asset: assets/Fonts/CeraPro-Thin.ttf
