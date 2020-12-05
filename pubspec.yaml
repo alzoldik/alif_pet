@@ -32,12 +32,14 @@ dependencies:
   path:
   webview_flutter: ^0.3.20
   simple_animations: ^1.1.3
+  flutter_facebook_login: ^3.0.0
   flutter_rounded_date_picker: ^1.0.4
   google_maps_flutter: ^0.5.24+1
   geolocator: ^5.3.0
   location: ^2.5.0
   #  keyboard_visibility:
   flutter_polyline_points: ^0.1.0
+  google_sign_in: ^4.2.0
   permission_handler: ^3.0.0
   agora_rtc_engine: ^1.0.8
   flutter_pusher_client:

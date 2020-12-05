@@ -458,7 +458,7 @@ class RegisterState extends State<Register> {
                           )),
                     ],
                   ),
-                  /*   Container(
+                  Container(
                     alignment: Alignment.centerRight,
                     height:  6*SizeConfig.heightMultiplier,
                     margin: EdgeInsets.only(top: 1*SizeConfig.heightMultiplier,left: 6.5*SizeConfig.widthMultiplier,right: 6.5*SizeConfig.widthMultiplier),
@@ -486,7 +486,7 @@ class RegisterState extends State<Register> {
                         ),
                       ),
                     ),
-                  ),*/
+                  ),
                   Container(
                     width: ScreenUtil.getInstance().width.toDouble(),
                     height: 6 * SizeConfig.heightMultiplier,
@@ -758,7 +758,7 @@ class RegisterState extends State<Register> {
                     !CommonUtils.isValidEmail(emailController.text)) {
                   ToastUtils.showCustomToast(
                       context,
-                      "Please Enter Valid EmailAddress",
+                      "Please enter a valid email address",
                       Colors.white,
                       MyColors.primaryColor);
                   return;
@@ -776,6 +776,7 @@ class RegisterState extends State<Register> {
                 registerMap.putIfAbsent("role", () => role);
                 //  String registerMapJson = json.encode(registerMap);
                 //  List<int> bodyBytes = utf8.encode(Uri.encodeQueryComponent(registerMapJson));
+
                 CommonApis()
                     .register(registerMap,
                         CommonUtils.getLanguage(context) == "english")

@@ -357,7 +357,7 @@ class CommonApis {
   Future<dynamic> register(dynamic data, bool isEnglish) async {
     try {
       final response = await Dio().post("${ApiUtils.BaseApiUrl}/register",
-          data: data, options: Options(headers: ApiUtils.headerForRegister));
+          data: data, options: Options(headers: ApiUtils.normalHeader));
       if (response.statusCode == 200) {
         return true;
       } else {
@@ -375,7 +375,7 @@ class CommonApis {
   Future<dynamic> verifyEmail(dynamic data, BuildContext context) async {
     try {
       final response = await Dio().post("${ApiUtils.BaseApiUrl}/confirm_email",
-          data: data, options: Options(headers: ApiUtils.headerForRegister));
+          data: data, options: Options(headers: ApiUtils.normalHeader));
       if (response.statusCode == 200) {
         return true;
       } else {
@@ -395,7 +395,7 @@ class CommonApis {
       final response = await Dio().post(
           "${ApiUtils.BaseApiUrl}/auth/social/facebook",
           data: data,
-          options: Options(headers: ApiUtils.headerForRegister));
+          options: Options(headers: ApiUtils.normalHeader));
       if (response.statusCode == 200) {
         return {"token": response.data['token']};
       } else {
@@ -415,7 +415,7 @@ class CommonApis {
       final response = await Dio().post(
           "${ApiUtils.BaseApiUrl}/auth/social/google",
           data: data,
-          options: Options(headers: ApiUtils.headerForRegister));
+          options: Options(headers: ApiUtils.normalHeader));
       if (response.statusCode == 200) {
         return {"token": response.data['token']};
       } else {
@@ -433,7 +433,7 @@ class CommonApis {
   Future<dynamic> verifyMobile(dynamic data, BuildContext context) async {
     try {
       final response = await Dio().post("${ApiUtils.BaseApiUrl}/confirm_mobile",
-          data: data, options: Options(headers: ApiUtils.headerForRegister));
+          data: data, options: Options(headers: ApiUtils.normalHeader));
       if (response.statusCode == 200) {
         return true;
       } else {

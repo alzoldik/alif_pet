@@ -19,9 +19,10 @@ import 'package:alif_pet/models/login_response.dart';
 import 'package:alif_pet/models/verificatedModel.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-// import 'package:flutter_facebook_login/flutter_facebook_login.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_facebook_login/flutter_facebook_login.dart';
 import 'package:flutter_statusbarcolor/flutter_statusbarcolor.dart';
-// import 'package:google_sign_in/google_sign_in.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
@@ -42,12 +43,12 @@ class Login extends StatefulWidget {
 
 class LoginState extends State<Login> {
   bool isLoggingIn = false;
-  // GoogleSignIn _googleSignIn = GoogleSignIn(
-  //   scopes: [
-  //     'email',
-  //     'https://www.googleapis.com/auth/contacts.readonly',
-  //   ],
-  // );
+  GoogleSignIn _googleSignIn = GoogleSignIn(
+    scopes: [
+      'email',
+      'https://www.googleapis.com/auth/contacts.readonly',
+    ],
+  );
   final emailOrMobileEtController = TextEditingController();
   final passwordEtController = TextEditingController();
   AppLanguage appLanguage;
@@ -276,6 +277,7 @@ class LoginState extends State<Login> {
                               color: Colors.grey.withOpacity(.4),
                             ),
                           ),
+
                           Expanded(
                             flex: 4,
                             child: Container(
@@ -287,7 +289,6 @@ class LoginState extends State<Login> {
                         ],
                       ),
                     ),
-                    /*
                     Container(
                       margin:
                           EdgeInsets.only(top: 2 * SizeConfig.heightMultiplier),
@@ -364,7 +365,6 @@ class LoginState extends State<Login> {
                         ],
                       ),
                     ),
-                     */
                     Container(
                         alignment: Alignment.center,
                         margin: EdgeInsets.only(
@@ -611,26 +611,26 @@ class LoginState extends State<Login> {
     });
   }
 
-  // void doFacebookSignIn() async {
-  //   final facebookLogin = FacebookLogin();
-  //   //   facebookLogin.logOut();
-  //   final result = await facebookLogin.logIn(['email']);
-  //   switch (result.status) {
-  //     case FacebookLoginStatus.loggedIn:
-  //       //  hitFacebookApi(result.accessToken.token);
-  //       hitFacebookApi(result.accessToken.token);
-  //       await facebookLogin.logOut();
-  //       break;
-  //     case FacebookLoginStatus.cancelledByUser:
-  //       ToastUtils.showCustomToast(
-  //           context, "cancelled", Colors.white, MyColors.primaryColor);
-  //       break;
-  //     case FacebookLoginStatus.error:
-  //       ToastUtils.showCustomToast(
-  //           context, result.errorMessage, Colors.white, MyColors.primaryColor);
-  //       break;
-  //   }
-  // }
+  void doFacebookSignIn() async {
+    final facebookLogin = FacebookLogin();
+    //   facebookLogin.logOut();
+    final result = await facebookLogin.logIn(['email']);
+    switch (result.status) {
+      case FacebookLoginStatus.loggedIn:
+        //  hitFacebookApi(result.accessToken.token);
+        hitFacebookApi(result.accessToken.token);
+        await facebookLogin.logOut();
+        break;
+      case FacebookLoginStatus.cancelledByUser:
+        ToastUtils.showCustomToast(
+            context, "cancelled", Colors.white, MyColors.primaryColor);
+        break;
+      case FacebookLoginStatus.error:
+        ToastUtils.showCustomToast(
+            context, result.errorMessage, Colors.white, MyColors.primaryColor);
+        break;
+    }
+  }
 
   // ignore: unused_element
   bool _isNumeric(String str) {
